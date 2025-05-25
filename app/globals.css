@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans bg-light text-dark;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 px-4 md:px-8 lg:px-16;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .btn-primary {
+    @apply bg-[#e94560] text-white px-6 py-3 rounded-md hover:bg-[#d13b54] transition-all shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-[#e94560] text-[#e94560] px-6 py-3 rounded-md hover:bg-[#e94560] hover:text-white transition-all shadow-lg hover:shadow-xl;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-lg overflow-hidden;
+  }
+
+  .floating-btn {
+    @apply fixed bottom-6 right-6 bg-[#FEE500] text-black p-4 rounded-full shadow-lg hover:shadow-xl transition-all animate-float;
+  }
+
+  .tech-icon {
+    @apply flex flex-col items-center justify-center p-4 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 border border-white/10;
+  }
+}
+
+@layer utilities {
+  .animate-float-slow {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-slow-delay {
+    animation: float 6s ease-in-out 1s infinite;
+  }
+
+  .animate-float-slow-delay-2 {
+    animation: float 6s ease-in-out 2s infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+} 
