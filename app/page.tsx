@@ -34,6 +34,12 @@ const Home: React.FC = () => {
       image: '/project2.jpg',
       demo: 'https://hospital01-psi.vercel.app/',
     },
+    {
+      title: '회사형 폼 페이지',
+      description: '기업용 반응형 폼 웹사이트',
+      image: '/project3.jpg',
+      demo: 'https://startuppage-azure.vercel.app/',
+    },
   ];
 
   const processSteps = [
@@ -163,7 +169,22 @@ const Home: React.FC = () => {
             {projects.map((project, index) => (
               <SwiperSlide key={index}>
                 <div className="card" data-aos="fade-up" data-aos-delay={index * 100}>
-                  <div className="h-48 bg-gray-200"></div>
+                  <div className="h-48 bg-gray-200 flex items-center justify-center">
+                    {index === 0 ? (
+                      <svg className="w-24 h-24 text-gray-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 21H20V19H2V21ZM20 8H18V5H20V8ZM20 3H4V13C4 14.1 4.9 15 6 15H18C19.1 15 20 14.1 20 13V3ZM6 19H18V17H6V19Z" fill="currentColor"/>
+                        <path d="M8 10H16V12H8V10Z" fill="currentColor"/>
+                        <path d="M8 6H16V8H8V6Z" fill="currentColor"/>
+                      </svg>
+                    ) : (
+                      <svg className="w-24 h-24 text-gray-600" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19Z" fill="currentColor"/>
+                        <path d="M7 12H9V17H7V12Z" fill="currentColor"/>
+                        <path d="M11 7H13V17H11V7Z" fill="currentColor"/>
+                        <path d="M15 10H17V17H15V10Z" fill="currentColor"/>
+                      </svg>
+                    )}
+                  </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                     <p className="text-gray-600 mb-4">{project.description}</p>
