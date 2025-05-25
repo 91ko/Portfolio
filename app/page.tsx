@@ -26,13 +26,13 @@ const Home: React.FC = () => {
       title: '카페 웹사이트',
       description: '반응형 카페 웹사이트 제작',
       image: '/project1.jpg',
-      demo: 'https://project1.com',
+      demo: 'https://cafeport.vercel.app/',
     },
     {
       title: '병원 반응형 사이트',
       description: '의료기관 웹사이트 제작',
       image: '/project2.jpg',
-      demo: 'https://project2.com',
+      demo: 'https://hospital01-psi.vercel.app/',
     },
   ];
 
@@ -92,7 +92,7 @@ const Home: React.FC = () => {
         <div className="container-custom text-center relative z-10">
           <div className="mb-8" data-aos="fade-up">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              knockout_coder
+              Knockout_coder
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300">
               소상공인을 위한 웹사이트 제작 전문
@@ -124,7 +124,21 @@ const Home: React.FC = () => {
           </div>
 
           <div className="flex gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
-            <button className="btn-primary px-12">📞 문의하기</button>
+            <a 
+              href="https://open.kakao.com/o/svO9heyh" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-primary px-12 flex items-center gap-2"
+            >
+              <Image 
+                src="/kakao.svg" 
+                alt="카카오톡" 
+                width={24} 
+                height={24} 
+                className="w-6 h-6"
+              />
+              카카오톡 문의하기
+            </a>
           </div>
         </div>
       </section>
@@ -203,26 +217,21 @@ const Home: React.FC = () => {
             문의하기
           </h2>
           <div className="max-w-md mx-auto" data-aos="fade-up" data-aos-delay="100">
-            <form className="space-y-4">
-              <input
-                type="text"
-                placeholder="이름"
-                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-primary"
+            <a 
+              href="https://open.kakao.com/o/svO9heyh" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-primary w-full flex items-center justify-center gap-2"
+            >
+              <Image 
+                src="/kakao.svg" 
+                alt="카카오톡" 
+                width={24} 
+                height={24} 
+                className="w-6 h-6"
               />
-              <input
-                type="email"
-                placeholder="이메일"
-                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-primary"
-              />
-              <textarea
-                placeholder="문의 내용"
-                rows={4}
-                className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:border-primary"
-              ></textarea>
-              <button type="submit" className="btn-primary w-full">
-                보내기
-              </button>
-            </form>
+              카카오톡으로 문의하기
+            </a>
           </div>
         </div>
       </section>
